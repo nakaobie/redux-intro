@@ -20,7 +20,7 @@ const accountSlice = createSlice({
       state.balance -= action.payload;
     },
 
-    // We do this because the function only accepts action.payload and here we have action.payload.amount and action.payload.purpose
+    // We do this because the function only accepts action.payload and here we have action.payload.amount and action.payload.purpose. It is 1 of the disadvantages of having this opinated structure. So we prepare the data before it reaches the reducer. So now it will receive more than 1 arguement.
 
     requestLoan: {
       prepare(amount, purpose) {
