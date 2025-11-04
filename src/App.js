@@ -27,3 +27,7 @@ function App() {
 export default App;
 
 //npm i redux
+//npm i react-redux
+//npm i redux-thunk
+//npm i redux-devtools-extension ---> install the extension in your browser too
+//npm i @reduxjs/toolkit

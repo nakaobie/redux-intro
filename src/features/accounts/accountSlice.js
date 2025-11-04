@@ -20,6 +20,8 @@ const accountSlice = createSlice({
       state.balance -= action.payload;
     },
 
+    // We do this because the function only accepts action.payload and here we have action.payload.amount and action.payload.purpose
+
     requestLoan: {
       prepare(amount, purpose) {
         return { payload: { amount, purpose } };
