@@ -1,5 +1,7 @@
 import { connect } from "react-redux";
 
+// OLD/LEGACY OF CONNECTING COMPONENTS TO REDUX
+
 function formatCurrency(value) {
   return new Intl.NumberFormat("en", {
     style: "currency",

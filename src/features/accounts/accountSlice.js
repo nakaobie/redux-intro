@@ -50,13 +50,14 @@ const accountSlice = createSlice({
 
 export const { withdraw, requestLoan, payLoan } = accountSlice.actions;
 
+// // Thunks is automatically provided in @reduxjs/toolkit, so this works
 export function deposit(amount, currency) {
   if (currency === "USD") return { type: "account/deposit", payload: amount };
   return async function (dispatch, getState) {
     dispatch({ type: "account/convertingCurrency" });
     // API call
     const res = await fetch(
-      `https://api.frankfurter.dev/v1/latest?base=${currency}&symbols=USD`
+      `https://api.frankfurter.dev/v1/latest?base=${currency}&symbols=USD`,
     );
     const data = await res.json();
     // console.log(data);

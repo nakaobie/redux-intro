@@ -8,3 +8,5 @@ const store = configureStore({
 });
 
 export default store;
+
+// Thunks is automatically provided in @reduxjs/toolkit

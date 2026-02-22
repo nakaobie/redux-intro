@@ -16,7 +16,7 @@ const customerSlice = createSlice({
           payload: {
             fullName,
             nationalID,
-            createdAt: new Date().toISOString(),
+            createdAt: new Date().toISOString(), // A prepare fn must be used in creating a side effect & not done in the reducer
           },
         };
       },
